@@ -1,0 +1,212 @@
+﻿<Page
+    x:Class="GyroSpace.DirectXPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GyroSpace"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" KeyDown="keys">
+
+	<Page.Resources>
+		<Style x:Key="ButtonStyle1" TargetType="Button">
+
+		<Setter Property="Background" Value="{StaticResource ButtonBackgroundThemeBrush}"/>
+			<Setter Property="Foreground" Value="{StaticResource ButtonForegroundThemeBrush}"/>
+			<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderThemeBrush}"/>
+			<Setter Property="BorderThickness" Value="{StaticResource ButtonBorderThemeThickness}"/>
+			<Setter Property="Padding" Value="12,4,12,4"/>
+			<Setter Property="HorizontalAlignment" Value="Left"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+			<Setter Property="FontWeight" Value="SemiBold"/>
+			<Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="PointerOver">
+										<Storyboard>
+											<DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Border" d:IsOptimized="True"/>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Pressed">
+										<Storyboard>
+											<DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Border" d:IsOptimized="True"/>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Disabled">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonDisabledBackgroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Border">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonDisabledBorderThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonDisabledForegroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Focused">
+										<Storyboard>
+											<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualWhite"/>
+											<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualBlack"/>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Unfocused"/>
+									<VisualState x:Name="PointerFocused"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="3">
+								<ContentPresenter x:Name="ContentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Border>
+							<Rectangle x:Name="FocusVisualWhite" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="1.5" StrokeEndLineCap="Square" Stroke="{StaticResource FocusVisualWhiteStrokeThemeBrush}" StrokeDashArray="1,1"/>
+							<Rectangle x:Name="FocusVisualBlack" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="0.5" StrokeEndLineCap="Square" Stroke="{StaticResource FocusVisualBlackStrokeThemeBrush}" StrokeDashArray="1,1"/>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</Page.Resources>
+
+    <SwapChainBackgroundPanel x:Name="SwapChainPanel" PointerMoved="OnPointerMoved" PointerReleased="OnPointerReleased">
+        <TextBlock x:Name="ScoreTextBlock" HorizontalAlignment="Left" FontSize="16" Text="Score : " Margin="221,17,0,0" Canvas.ZIndex="1" Width="116" VerticalAlignment="Top"/>
+        <Canvas x:Name="TitleImage" HorizontalAlignment="Center" Height="626" VerticalAlignment="Center" Width="517">
+            <Canvas.Background>
+                <ImageBrush ImageSource="titlescreen.png"/>
+            </Canvas.Background>
+        </Canvas>
+        <Button x:Name="OptionsButton" Content="" HorizontalAlignment="Left" Margin="33,378,0,0" VerticalAlignment="Top" Height="64" Width="64" BorderThickness="0" Click="OptionsButton_Click" Style="{StaticResource ButtonStyle1}">
+        	<Button.Background>
+        		<ImageBrush ImageSource="ms-appx:/options.png"/>
+        	</Button.Background>
+        </Button>
+        
+        <Button x:Name="StartButton" Content="" HorizontalAlignment="Left" Margin="33,162,0,0" VerticalAlignment="Top" BorderThickness="0" Click="StartButton_Click" Width="64" Height="64" Style="{StaticResource ButtonStyle1}">
+        	<Button.Background>
+        		<ImageBrush ImageSource="start.png"/>
+        	</Button.Background>
+        </Button>
+
+        <Button x:Name="HighScoreButton" Content="" HorizontalAlignment="Left" Margin="32,237,0,0" VerticalAlignment="Top" Height="64" Width="64" BorderThickness="0" Click="HighScoreButton_Click" Style="{StaticResource ButtonStyle1}">
+        	<Button.Background>
+        		<ImageBrush ImageSource="highscore.png"/>
+        	</Button.Background>
+        </Button>
+        <Button x:Name="InfoButton" Content="" HorizontalAlignment="Left" Margin="33,306,0,0" VerticalAlignment="Top" Height="64" Width="64" Click="InfoButton_Click" BorderThickness="0" Style="{StaticResource ButtonStyle1}">
+        	<Button.Background>
+        		<ImageBrush ImageSource="info.png"/>
+        	</Button.Background>
+        </Button>
+        <Image x:Name="GameOverImage" Source="gameover.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="333" Height="170"/>
+        <TextBlock x:Name="LivesTextBlock" HorizontalAlignment="Right" FontSize="16" Margin="0,17,128,0" Canvas.ZIndex="1" Width="104" VerticalAlignment="Top">
+        	<Run Text="Lives"/>
+        	<Run Text=" : "/>
+        </TextBlock>
+        <TextBlock x:Name="StartGameTextBlock" HorizontalAlignment="Left" FontSize="16" Text="Start Game" Margin="102,188,1136,561" Canvas.ZIndex="1" Width="128"/>
+        <TextBlock x:Name="HighScoresTextBlock" HorizontalAlignment="Left" FontSize="16" Text="High Scores" Margin="102,262,1136,487" Canvas.ZIndex="1" Width="128"/>
+        <TextBlock x:Name="InformationTextBlock" HorizontalAlignment="Left" FontSize="16" Text="Information" Margin="103,329,1135,420" Canvas.ZIndex="1" Width="128"/>
+        <TextBlock x:Name="OptionsTextBlock" HorizontalAlignment="Left" FontSize="16" Text="Options" Margin="103,397,1135,352" Canvas.ZIndex="1" Width="128"/>
+        
+        <Grid x:Name="HighScores" HorizontalAlignment="Left" Height="600" Margin="700,71,0,0" VerticalAlignment="Top" Width="300" Background="#FFA24747">
+        	<TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="High Scores" VerticalAlignment="Top" FontSize="16"/>
+        	<Button x:Name="CloseHighScorePanelButton" Content="Close" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom" Click="CloseHighScorePanel"/>
+        	<TextBlock HorizontalAlignment="Center" Margin="70,92,217,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" FontSize="16" Width="13"/>
+        	<TextBlock HorizontalAlignment="Center" Margin="70,113,217,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" FontSize="16" Width="13"/>
+        	<TextBlock HorizontalAlignment="Center" Margin="70,133,217,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" FontSize="16" Width="13"/>
+        	<TextBlock HorizontalAlignment="Center" Margin="70,156,217,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" FontSize="16" Width="13"/>
+        	<TextBlock HorizontalAlignment="Center" Margin="70,71,217,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="16" Width="13"/>
+        	<TextBlock x:Name="Name1TextBlock" HorizontalAlignment="Center" Margin="133,71,77,0" TextWrapping="Wrap" Text="ABC 5000" VerticalAlignment="Top" FontSize="16" Width="90"/>
+        	<TextBlock x:Name="Name2TextBlock" HorizontalAlignment="Center" Margin="133,92,77,0" TextWrapping="Wrap" Text="DEF 4000" VerticalAlignment="Top" FontSize="16" Width="90"/>
+        	<TextBlock x:Name="Name3TextBlock" HorizontalAlignment="Center" Margin="133,113,77,0" TextWrapping="Wrap" Text="GHI 3000" VerticalAlignment="Top" FontSize="16" Width="90"/>
+        	<TextBlock x:Name="Name4TextBlock" HorizontalAlignment="Center" Margin="133,133,77,0" TextWrapping="Wrap" Text="JKL 2000" VerticalAlignment="Top" FontSize="16" Width="90"/>
+        	<TextBlock x:Name="Name5TextBlock" HorizontalAlignment="Center" Margin="133,156,77,0" TextWrapping="Wrap" Text="MNO 1000" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.132,0.447" Width="90"/>
+        </Grid>
+
+        <Grid x:Name="Information" HorizontalAlignment="Left" Height="600" Margin="200,71,0,0" VerticalAlignment="Top" Width="300" Background="#FF60A247">
+            <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap"  Text="Information" VerticalAlignment="Top" FontSize="16"/>
+        	<Button x:Name="CloseInfoPanelButton" Content="Close" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom" Click="CloseInfoPanel"/>
+        	<Image Margin="42,303,224,265" Source="Options Meteor.png" Stretch="Fill"/>
+        	<Image Margin="34,363,224,205" Source="Options Meteor1.png" Stretch="Fill"/>
+        	<Image Margin="26,435,224,115" Source="fuel0.png" Stretch="Fill"/>
+        	<TextBlock HorizontalAlignment="Center" Margin="115,340,39,0" TextWrapping="Wrap"  Text="Avoid the Meteors" VerticalAlignment="Top" Width="146" FontSize="16"/>
+        	<TextBlock HorizontalAlignment="Center" Margin="115,435,33,0" TextWrapping="Wrap"  Text="Collect the Fuel Cells" VerticalAlignment="Top" Width="152" FontSize="16"/>
+        	<TextBlock HorizontalAlignment="Center" Margin="10,34,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Height="233" FontSize="16">
+        		<Run Text="Move the space ship around the screen either by using the "/>
+        		<Run Text="Keys A to move left or S to move right"/>
+        		<Run Text=", "/>
+        		<Run Text="mouse, "/>
+        		<Run FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="accelerometer"/>
+        		<Run FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text=" "/>
+        		<Run Text="or by "/>
+        		<Run Text="swiping the screen using "/>
+        		<Run Text="your fingers"/>
+        		<Run Text=" . "/>
+        		<LineBreak/>
+        		<Run/>
+        		<LineBreak/>
+        		<Run Text="Avoid the Meteors and collect the Fuel cells to survive. If you survive for long enough you will reach a planet and the space ship will fly towards it, before moving onto the next planet."/>
+        	</TextBlock>
+        </Grid>
+
+        <Grid x:Name="Options" HorizontalAlignment="Left" Height="600" Margin="500,71,0,0" VerticalAlignment="Top" Width="300" Background="#FF5347A2">
+        		<TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Options" FontSize="16"/>
+        		<Button x:Name="CloseOptionsButton" Content="Close" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom" Click="CloseOptionsPanel"/>
+        		<Slider x:Name="DifficultySlider" HorizontalAlignment="Center" Margin="100,259,100,0" VerticalAlignment="Top" Width="100" Maximum="3" StepFrequency="1" SmallChange="1" LargeChange="1" Minimum="1" ValueChanged="DifficultySlider_ValueChanged"/>
+        		<TextBlock HorizontalAlignment="Center" Margin="86,242,88,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Set the Difficulty" Width="126" FontSize="16"/>
+        		<TextBlock HorizontalAlignment="Center" Margin="87,296,189,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Easy" Width="24"/>
+        		<TextBlock HorizontalAlignment="Center" Margin="130,296,129,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Medium" Width="41"/>
+        		<TextBlock HorizontalAlignment="Center" Margin="188,296,88,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Hard" Width="24"/>
+        		<RadioButton x:Name="KeyBoardRadioButton" Content="KeyBoard" HorizontalAlignment="Left" Margin="86,68,0,0" VerticalAlignment="Top" Checked="KeyBoardRadioButton_Checked" IsChecked="True"/>
+        		<RadioButton x:Name="TouchScreenRadioButton" Content="Touch Screen" HorizontalAlignment="Left" Margin="86,103,0,0" VerticalAlignment="Top"/>
+        		<RadioButton x:Name="AccelerometerRadioButton" Content="Accelerometer" HorizontalAlignment="Left" Margin="86,140,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid x:Name="FuelLevel" HorizontalAlignment="Center" Height="25" Margin="0,14,0,0" VerticalAlignment="Top" Width="276" Background="#FF040404">
+        	<TextBlock HorizontalAlignment="Center" Margin="0,19,410,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Fuel" Width="22"/>
+        	<Rectangle x:Name="FuelLevelRectangle" HorizontalAlignment="Left" Height="22" Margin="32,1,0,0" VerticalAlignment="Top" Width="240" Canvas.ZIndex="-1" Fill="#FF2AE84C" Stroke="Black"/>
+        	<TextBlock HorizontalAlignment="Left" Margin="0,3,0,0" TextWrapping="Wrap" Text="Fuel" VerticalAlignment="Top" FontSize="16"/>
+        </Grid>
+        <Grid x:Name="InputName" HorizontalAlignment="Center" Height="263" Margin="0" VerticalAlignment="Center" Width="297" Background="#FF931717">
+            <TextBlock HorizontalAlignment="Center" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="277" Height="77" FontSize="16" TextAlignment="Center">
+            	<Run Text="Congratulations You Have "/>
+            	<Run Text="Scored "/>
+            	<Run Text="A "/>
+            	<Run Text="New High Score"/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="Please Enter Your Name"/>
+            </TextBlock>
+        </Grid>
+
+    </SwapChainBackgroundPanel>
+
+    <Page.BottomAppBar>
+        <AppBar Padding="10,0,10,0">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button Style="{StaticResource AppBarButtonStyle}" 
+                            Tag="Quit" 
+                            AutomationProperties.AutomationId="QuitAppBarButton" Content="&#xE112;"  
+                            AutomationProperties.Name="Quit Game" 
+                            Click="OnQuitPressed"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+				     <Button Style="{StaticResource AppBarButtonStyle}"
+                            Tag="Pause" 
+                            AutomationProperties.AutomationId="PauseAppBarButton" Content="&#xE103;"  
+                            AutomationProperties.Name="Pause"
+							Click="OnPausePressed"/>
+                </StackPanel>
+
+
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>

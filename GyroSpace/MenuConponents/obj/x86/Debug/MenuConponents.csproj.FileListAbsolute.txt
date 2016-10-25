@@ -1,0 +1,12 @@
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\bin\x86\Debug\MenuConponents.winmd
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\bin\x86\Debug\MenuConponents.pdb
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\bin\x86\Debug\MenuConponents.pri
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\obj\x86\Debug\MenuConponents.winmd
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\obj\x86\Debug\MenuConponents.pdb
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\obj\x86\Debug\MenuConponents.winmdobj
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\obj\x86\Debug\MenuConponents.compile.pdb
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\obj\x86\Debug\priconfig.xml
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\obj\x86\Debug\layout.resfiles
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\obj\x86\Debug\resources.resfiles
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\obj\x86\Debug\pri.resfiles
+C:\Users\ian\Desktop\22.GyroSpace\MenuConponents\obj\x86\Debug\LanguageQualifiers.txt
