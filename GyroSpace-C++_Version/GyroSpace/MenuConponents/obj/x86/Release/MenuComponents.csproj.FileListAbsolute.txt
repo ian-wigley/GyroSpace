@@ -1,0 +1,72 @@
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\bin\x86\Release\MenuComponents.winmd
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\bin\x86\Release\MenuComponents.pdb
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\bin\x86\Release\MenuComponents.pri
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.winmd
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.pdb
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.winmdobj
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.compile.pdb
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\obj\x86\Release\priconfig.xml
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\obj\x86\Release\layout.resfiles
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\obj\x86\Release\resources.resfiles
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\obj\x86\Release\pri.resfiles
+C:\Users\Ian\Desktop\42.GyroSpace\MenuConponents\obj\x86\Release\LanguageQualifiers.txt
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\bin\x86\Release\MenuComponents.winmd
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\bin\x86\Release\MenuComponents.pdb
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\bin\x86\Release\MenuComponents.pri
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\obj\x86\Release\MenuComponents.winmd
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\obj\x86\Release\MenuComponents.pdb
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\obj\x86\Release\MenuComponents.winmdobj
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\obj\x86\Release\MenuComponents.compile.pdb
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\obj\x86\Release\priconfig.xml
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\obj\x86\Release\layout.resfiles
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\obj\x86\Release\resources.resfiles
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\obj\x86\Release\pri.resfiles
+C:\Users\Ian\Desktop\56a.GyroSpace - Prelim\MenuConponents\obj\x86\Release\LanguageQualifiers.txt
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\bin\x86\Release\MenuComponents.winmd
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\bin\x86\Release\MenuComponents.pdb
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\bin\x86\Release\MenuComponents.pri
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\obj\x86\Release\MenuComponents.winmd
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\obj\x86\Release\MenuComponents.pdb
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\obj\x86\Release\MenuComponents.winmdobj
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\obj\x86\Release\MenuComponents.compile.pdb
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\obj\x86\Release\priconfig.xml
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\obj\x86\Release\layout.resfiles
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\obj\x86\Release\resources.resfiles
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\obj\x86\Release\pri.resfiles
+C:\Users\Ian\Desktop\57.GyroSpace - Final -\MenuConponents\obj\x86\Release\LanguageQualifiers.txt
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\bin\x86\Release\MenuComponents.winmd
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\bin\x86\Release\MenuComponents.pdb
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\bin\x86\Release\MenuComponents.pri
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.winmd
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.pdb
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.winmdobj
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.compile.pdb
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\priconfig.xml
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\priconfig.xml.intermediate
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\layout.resfiles
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\layout.resfiles.intermediate
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\resources.resfiles
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\resources.resfiles.intermediate
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\pri.resfiles
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\pri.resfiles.intermediate
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\qualifiers.txt
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\qualifiers.txt.intermediate
+C:\Users\ianwi\Desktop\Master Typescript before Git\Uni stuff\Sys Prog\58.GyroSpace\MenuConponents\obj\x86\Release\MultipleQualifiersPerDimensionFound.txt
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\bin\x86\Release\MenuComponents.winmd
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\bin\x86\Release\MenuComponents.pdb
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\bin\x86\Release\MenuComponents.pri
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.winmd
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.pdb
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.winmdobj
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\MenuComponents.compile.pdb
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\priconfig.xml
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\priconfig.xml.intermediate
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\layout.resfiles
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\layout.resfiles.intermediate
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\resources.resfiles
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\resources.resfiles.intermediate
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\pri.resfiles
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\pri.resfiles.intermediate
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\qualifiers.txt
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\qualifiers.txt.intermediate
+C:\Users\ianwi\OneDrive\Documents\GitHub\GyroSpace\GyroSpace\MenuConponents\obj\x86\Release\MultipleQualifiersPerDimensionFound.txt

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/alien.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/bullet.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/earth.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/explosion.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/fuel0.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/fuelgauge.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/gameover.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/GyroTile.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/highscore.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/ice.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/info.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/meteor0.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/meteor1.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/meteor3.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/Options Meteor.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/Options Meteor1.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/options.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/ship.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/star.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/start.png</File>
+    <File>C:/Users/ianwi/Desktop/C# Gyrospace/01.GyroSpace/GyroSpace/Content/titlescreen.png</File>
+  </SourceFiles>
+</SourceFileCollection>

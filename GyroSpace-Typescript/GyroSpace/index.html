@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <!--<title>TypeScript HTML App</title>-->
+    <link rel="stylesheet" href="app.css" type="text/css" />
+
+    <style>
+        body {
+            color: #ffffff;
+            font-family: Monospace;
+            font-size: 13px;
+            text-align: center;
+            font-weight: bold;
+            background-color: #000000;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        #info {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            padding: 5px;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        #oldie a {
+            color: #da0;
+        }
+    </style>
+
+    <!-- ---------------- Custom Shader Code ------------------------ -->
+    <script id="vertexShader" type="x-shader/x-vertex">
+        void main()
+        {
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+        }
+    </script>
+
+    <!-- fragment shader a.k.a. pixel shader -->
+    <script id="fragmentShader" type="x-shader/x-fragment">
+
+        uniform float time;
+        uniform vec2 mouse;
+        uniform vec2 resolution;
+        uniform float scale;
+
+        void main( void )
+        {
+        // Scale helps to move the centre of the tunnel..
+        //float scale = 2.9;//cos(time / 8.0) * 8.0 + 8.005;
+        //if (scale < 0.025) scale = 0.025;
+
+        vec2 position = vec2((gl_FragCoord.x / resolution.x) - 0.5, (gl_FragCoord.y / resolution.y) - 0.5) * scale + mouse * 16.0;
+        vec2 coord = mod(position,0.0);	// coordinate of single effect window (0.0 - 1.0)
+
+        float gradient = 0.0;
+        vec3 color = vec3(0.0);
+
+        float angle = 0.0;
+        float radius = 0.0;
+        const float pi = 3.141592;
+        float fade = 0.0;
+
+        float u,v;
+        float z = 0.0;
+
+        vec2 centered_coord = coord - vec2(0.5);//0.5
+
+        float dist_from_center = length(centered_coord);
+        float angle_from_center = atan(centered_coord.y, centered_coord.x);
+
+        u = 12.0 / dist_from_center + 16.0 * time;
+        v = angle_from_center * 4.0;
+
+        fade = dist_from_center * 2.0;//2
+        //gradient = ((1.0 - pow(sin(u) + 1.0, 0.1)) + (1.0 - pow(sin(v) + 1.0, 0.1))) * fade;
+        gradient = ((1.0 - pow(sin(u) + 1.0, 0.1)) + (1.0 - pow(sin(v) + 1.0, 0.1))) * fade;
+        //color = vec3(gradient * 4.0, gradient, gradient / 2.0);
+        color = vec3(gradient , gradient * 2.0, gradient * 20.0);
+
+        //       gl_FragColor = vec4(color, 1.0 );
+        }
+    </script>
+
+</head>
+<body>
+    <img id="alien" src="images/alien.png" style="display: none;" />
+    <img id="bullet" src="images/bullet.png" style="display: none;" />
+    <img id="dirlist.txt" src="images/dirlist.txt" style="display: none;" />
+    <img id="earth" src="images/earth.png" style="display: none;" />
+    <img id="explosion" src="images/explosion.png" style="display: none;" />
+    <img id="fuel" src="images/fuel.png" style="display: none;" />
+    <img id="fuel0" src="images/fuel0.png" style="display: none;" />
+    <img id="fuelgauge" src="images/fuelgauge.png" style="display: none;" />
+    <img id="gameover" src="images/gameover.png" style="display: none;" />
+    <img id="GyroTile" src="images/GyroTile.png" style="display: none;" />
+    <img id="highscore" src="images/highscore.png" style="display: none;" />
+    <img id="ice" src="images/ice.png" style="display: none;" />
+    <img id="info" src="images/info.png" style="display: none;" />
+    <img id="map" src="images/map.png" style="display: none;" />
+    <img id="meteor0" src="images/meteor0.png" style="display: none;" />
+    <img id="meteor1" src="images/meteor1.png" style="display: none;" />
+    <img id="meteor3" src="images/meteor3.png" style="display: none;" />
+    <img id="Options Meteor" src="images/Options Meteor.png" style="display: none;" />
+    <img id="Options Meteor1" src="images/Options Meteor1.png" style="display: none;" />
+    <img id="options" src="images/options.png" style="display: none;" />
+    <img id="ship" src="images/ship.png" style="display: none;" />
+    <img id="star" src="images/star.png" style="display: none;" />
+    <img id="start" src="images/start.png" style="display: none;" />
+    <img id="titlescreen" src="images/titlescreen.png" style="display: none;" />
+
+    <div id="info">
+        <!--<a href="http://threejs.org" target="_blank">three.js</a> - OBJMTLLoader test-->
+        <!--Hit or No Hit !-->
+        <div id="score">0-0</div>
+        <div id="lives">0-0</div>
+    </div>
+
+    <div id="ThreeJS"></div>
+
+    <script data-main="main" src="require.js"></script>
+
+</body>
+</html>
